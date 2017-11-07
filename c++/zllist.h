@@ -32,12 +32,6 @@ public:
 	}
 
 public:
-	iterator insert(_Ty ty)
-	{
-		++mysize;
-		return  mylist.insert(ty);
-	}
-
 	iterator insert(const_iterator _Where, _Ty _Val)
 	{
 		++mysize;
@@ -60,18 +54,6 @@ public:
 	{
 		--mysize;
 		return mylist.erase(_Where);
-	}
-
-	iterator erase(const_iterator _First, const_iterator _Last)
-	{
-		--mysize;
-		return mylist.erase(_First, _Last);
-	}
-
-	iterator erase(iterator _First, iterator _Last)
-	{
-		--mysize;
-		return mylist.erase(_First, _Last);
 	}
 
 	void push_front(_Ty _Val)
