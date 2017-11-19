@@ -7,3 +7,6 @@ string_helper.h
 
 zllist.h
 解决Linux下std::list的size() O(n)的问题 ZLList
+
+unsort_fast_map.h
+解决map 迭代器速度问题，解决在map随机取一定个数元素问题的问题。

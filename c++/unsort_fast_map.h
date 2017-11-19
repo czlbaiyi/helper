@@ -18,7 +18,7 @@
 
 /************************************************************************/
 /* 必须是无序的															*/
-/* Value必须实现GetKey方法，用于作为Key，并且这个Key不会被改变			*/
+/* Value必须实现GetKey方法，用于作为Key，并且这个Key不能被改变			*/
 /* 第二位只支持指针（1.实现原因，2.避免Vecter申请的空间太大）           */
 /************************************************************************/
 template<class _Kty, class _Ty>
@@ -29,6 +29,7 @@ public:
 
 public:
 	UnsortFastMap()
+		, m_nIdx(0)
 	{
 	}
 
@@ -150,13 +151,5 @@ private:
 	int m_nIdx;
 };
 
-class TestClass {
-public:
-	int a;
-public:
-	int GetKey() {
-		return a;
-	}
-};
 
 #endif
