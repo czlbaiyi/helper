@@ -1,8 +1,11 @@
+package json_check
+
 import (
   "errors"
 	"unicode"
   "fmt"
 )
+
 const (
 	OBJ_START = '{'
 	OBJ_END   = '}'
